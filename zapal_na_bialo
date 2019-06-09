@@ -1,0 +1,16 @@
+#include <FastLED.h>
+
+#define NUM_LEDS 50
+#define DATA_PIN 6
+
+CRGB leds[NUM_LEDS];
+
+void setup() { 
+      FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // initialize digital pin LED_BUILTIN as an output.
+}
+
+void loop() { 
+  FastLED.showColor(0x008000);
+  FastLED.show();  
+}
